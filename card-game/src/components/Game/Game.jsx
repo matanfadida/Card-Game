@@ -101,17 +101,19 @@ const Game = (props) => {
         </div>
         <div className={classess.game}>
             <div>
-                <ul>{names.map((animal, i) => <CardName
+                <ul className={classess['grid-list']}>
+                    {names.map((animal, i) => <CardName
                     selectedArray={selectedArray}
                     MatchHandler={MatchHandler}
                     key={i}
                     animal={animal}
                     noClick={tryFindName !== ""}
                     tryFindName={tryFindName}
-                    setTryFind={TryFindNameHandler} />)}</ul>
+                    setTryFind={TryFindNameHandler} />)}
+                    </ul>
             </div>
             <div>
-                <ul>
+                <ul className={classess['grid-list']}>
                     {images.map((animal, i) => <CardImage
                         selectedArray={selectedArray}
                         MatchHandler={MatchHandler}

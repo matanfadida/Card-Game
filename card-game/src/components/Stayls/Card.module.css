@@ -1,11 +1,4 @@
-.card {
-    border: 2px solid;
-    width: 80px;
-    height: 60px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-}
+
 
 .selected{
   background-color: tomato;
@@ -18,7 +11,56 @@
 }
 
 .matched{
-  background-color: greenyellow;
+  background: linear-gradient(110deg, #31d636 60%, #6edd79 60%) !important;
   cursor: not-allowed;
   pointer-events: none;
+}
+
+
+/* Optional: Style individual items */
+.card {
+  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #ccc;
+  height: 90px;
+  align-items: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.open {
+  animation-name: listOpen;
+  animation-duration: 0.8s;
+}
+
+.close {
+  animation-name: listClose;
+  animation-duration: 1.5s;
+  opacity: 0;
+}
+
+@keyframes listOpen {
+  from {
+    opacity: 0;
+    width: 20px;
+    transform: translateX(10%);
+  }
+  to {
+    opacity: 1;
+    width: 70px;
+    transform: translateX(0);
+  }
+}
+
+@keyframes listClose {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(100%);
+  }
 }

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { motion } from "framer-motion"
 import classess from '../Stayls/Card.module.css'
 
 const CardName = (props) => {
@@ -16,7 +17,7 @@ const CardName = (props) => {
         props.setTryFind(animal);
     }
 
-    return <li className={`${classess.card} ${props.tryFindName === props.animal ? classess.selected : ""} ${matched ? classess.matched :""} ${props.noClick ? classess["not-click"] : ""}`} onClick={() => {SelectedHandler(props.animal)}}>
+    return <li className={`${classess.card} ${props.tryFindName === props.animal ? `${classess.selected} ${classess.open}` : ""} ${matched ? classess.matched :""} ${props.noClick ? classess["not-click"] : ""}`} onClick={() => {SelectedHandler(props.animal)}}>
         {(props.tryFindName === props.animal || matched) && props.animal}
     </li>
 }

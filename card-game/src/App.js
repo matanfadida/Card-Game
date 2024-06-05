@@ -8,7 +8,6 @@ const DUMMY_DYTAILS = {
   Zebra:"Zebra-value",
   Dog:"Dog-value",
   Deer:"Deer-value",
-  Squirrel:"Squirrel-value",
   Fox:"Fox-value",
 }
 function App() {
