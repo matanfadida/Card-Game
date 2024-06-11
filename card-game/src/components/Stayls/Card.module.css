@@ -11,7 +11,7 @@
 }
 
 .matched{
-  background: linear-gradient(110deg, #31d636 60%, #6edd79 60%) !important;
+  box-shadow: 1px 1px 20px #31d636;
   cursor: not-allowed;
   pointer-events: none;
 }
@@ -19,7 +19,10 @@
 
 /* Optional: Style individual items */
 .card {
-  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: radial-gradient(circle at center center, #282830, #e5e5f7), repeating-radial-gradient(circle at center center, #282830, #282830, 10px, transparent 20px, transparent 10px);
+  background-blend-mode: multiply;
   width: 70px;
   display: flex;
   justify-content: center;
@@ -30,9 +33,16 @@
   box-sizing: border-box;
 }
 
+.img{
+  width: 69px;
+  border-radius: 5px;
+  height: 89px;
+}
+
 .open {
   animation-name: listOpen;
   animation-duration: 0.8s;
+  background-image: none;
 }
 
 .close {

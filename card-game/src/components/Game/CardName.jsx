@@ -23,7 +23,7 @@ const CardName = (props) => {
         setOpen(false);
     }
 
-    return <li className={`${classess.card}  ${open ? classess.open : classess.close} ${props.tryFindName === props.animal ? `${classess.selected}` : ""} ${matched ? classess.matched :""} ${props.noClick ? classess["not-click"] : ""}`} onClick={() => {SelectedHandler(props.animal)}}>
+    return <li className={`${classess.card}  ${!open ? classess.open : classess.close} ${props.tryFindName === props.animal ? `${classess.selected}` : ""} ${matched ? classess.matched :""} ${props.noClick ? classess["not-click"] : ""}`} onClick={() => {SelectedHandler(props.animal)}}>
         {(props.tryFindName === props.animal || matched) && props.animal}
     </li>
 }

@@ -22,8 +22,8 @@ const CardImage = (props) => {
         props.setTryFind(animal);
     }
 
-    return <li className={`${classess.card} ${open ? classess.open : classess.close} ${props.tryFindName === props.animal ? classess.selected : ""} ${matched ? classess.matched :""} ${props.noClick ? classess["not-click"] : ""}`} onClick={() => {SelectedHandler(props.animal)}}>
-        {(props.tryFindName === props.animal || matched) && props.animal}
+    return <li className={`${classess.card} ${!open ? classess.open : classess.close} ${props.tryFindName === props.animal ? classess.selected : ""} ${matched ? classess.matched :""} ${props.noClick ? classess["not-click"] : ""}`} onClick={() => {SelectedHandler(props.animal)}}>
+        {(props.tryFindName === props.animal || matched) && <img className={classess.img} src={`/images/animals/${props.animal}.jpg`} alt={props.animal} />}
     </li>
 }
 
