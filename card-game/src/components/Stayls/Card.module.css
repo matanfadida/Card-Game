@@ -1,16 +1,15 @@
-
-
-.selected{
+.selected {
   background-color: tomato;
   cursor: not-allowed;
   pointer-events: none;
 }
-.not-click{
+
+.not-click {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.matched{
+.matched {
   box-shadow: 1px 1px 20px #31d636;
   cursor: not-allowed;
   pointer-events: none;
@@ -20,20 +19,18 @@
 /* Optional: Style individual items */
 .card {
   background-color: #e5e5f7;
-  opacity: 0.8;
-  background-image: radial-gradient(circle at center center, #282830, #e5e5f7), repeating-radial-gradient(circle at center center, #282830, #282830, 10px, transparent 20px, transparent 10px);
-  background-blend-mode: multiply;
+  background: linear-gradient(135deg, #00000055 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(225deg, #000000 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(315deg, #00000055 25%, transparent 25%) 0px 0/ 20px 20px, linear-gradient(45deg, #000000 25%, #e5e5f7 25%) 0px 0/ 20px 20px;
   width: 70px;
   display: flex;
   justify-content: center;
-  border: 1px solid #ccc;
+  border: 4px solid #fff;
   height: 90px;
   align-items: center;
   border-radius: 5px;
   box-sizing: border-box;
 }
 
-.img{
+.img {
   width: 69px;
   border-radius: 5px;
   height: 89px;
@@ -41,8 +38,10 @@
 
 .open {
   animation-name: listOpen;
+  opacity: 1;
   animation-duration: 0.8s;
   background-image: none;
+  background-color: #fff;
 }
 
 .close {
@@ -55,6 +54,7 @@
     opacity: 0;
     transform: rotateY(180deg);
   }
+
   to {
     opacity: 1;
     width: 70px;
@@ -67,6 +67,7 @@
     opacity: 1;
     transform: rotateY(180deg);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);

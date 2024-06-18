@@ -95,22 +95,18 @@ const Game = (props) => {
     }
 
     return <div>
-        {USERS.map((user, i) => <div key={i}>{`record-${user.id}: ${user.score}`}</div>)}
-        <div>
-            <button onClick={NewMatch}>New Game</button>
-        </div>
         <div className={classess.game}>
             <div>
                 <ul className={classess['grid-list']}>
                     {names.map((animal, i) => <CardName
-                    selectedArray={selectedArray}
-                    MatchHandler={MatchHandler}
-                    key={i}
-                    animal={animal}
-                    noClick={tryFindName !== ""}
-                    tryFindName={tryFindName}
-                    setTryFind={TryFindNameHandler} />)}
-                    </ul>
+                        selectedArray={selectedArray}
+                        MatchHandler={MatchHandler}
+                        key={i}
+                        animal={animal}
+                        noClick={tryFindName !== ""}
+                        tryFindName={tryFindName}
+                        setTryFind={TryFindNameHandler} />)}
+                </ul>
             </div>
             <div>
                 <ul className={classess['grid-list']}>
@@ -124,6 +120,12 @@ const Game = (props) => {
                         setTryFind={TryFindImageHandler}
                     />)}
                 </ul>
+            </div>
+        </div>
+        <div className={classess.record}>
+            {USERS.map((user, i) => <div key={i}>{`Record To Player-${user.id}: ${user.score}`}</div>)}
+            <div>
+                <button onClick={NewMatch} className={classess["button-game"]}>New Game</button>
             </div>
         </div>
     </div>
